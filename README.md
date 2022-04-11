@@ -19,6 +19,7 @@ accessToken: process.env.APP_KEY
 Data for the workflow is stored in the EVENT object. 
 
 Example data:
+```json
 {
   "origin": {
 	// Your portal ID
@@ -40,6 +41,7 @@ Example data:
   // A unique ID for this execution
   "callbackId": "ap-123-456-7-8"
 }
+```
 
 You can access these values like so:
 event.origin.portalId which has a value = 1
