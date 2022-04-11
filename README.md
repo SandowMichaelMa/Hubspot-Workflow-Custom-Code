@@ -5,7 +5,7 @@ This is an example of a Hubspot Workflow Custom Coded Actions that takes in a DE
 We mostly use an AWAIT ASYNC to retrieve and process data.
 
 ## API Key and data in the Workflow
-In order to run API requests, you need to add the API key as a SECRET to the WORKFLOW. For my purposes, I created a Private App to prevent workflows from breaking due to a key rotation. I can, likewise, track the amount of requests the WORKFLOW executes separately from the default key requests.
+In order to run API requests, you need to add the API key as a SECRET to the WORKFLOW. For my purposes, I created a Private App (Settings -> Account Setup -> Private Apps) to prevent workflows from breaking due to a key rotation. I can, likewise, track the amount of requests the WORKFLOW executes separately from the default key requests.
 
 They can be accessed as an enviroment variable once selected
 eg, process.env.SECRET_KEY_NAME
@@ -13,8 +13,10 @@ eg, process.env.SECRET_KEY_NAME
 For hapikey use (aka, main API Key for the hubspot account):
 apiKey: process.env.HAPIKEY
 
-For Access tokens use (aka, Private App Key or OAUTH)
+For Access tokens use (aka, Private App Key access token or OAUTH)
 accessToken: process.env.APP_KEY
+
+You can use whatever name you want for your secret key. hapikey is often used in the documentation and is generally referring to the main Hubspot API key. As such, to ensure I don't confuse what key is being used, I will chose a different name for a Private App key. You may need to play around with the scopes of your app key to get exactly the permissions you want. You can check the console log in the step for scope rejection. There are some legacy scopes still in there which may sometimes need to be used to access certain data.
 
 Data for the workflow is stored in the EVENT object. 
 
