@@ -55,6 +55,14 @@ event.inputFields.INPUT_FIELD_NAME
 ## Process
 The actions are broken into four steps with each step performing a specific task. The reason to break it apart is to ensure we never run into the 20 second execution time or the memory limit of an action.
 
+### Trigger
+The workflow trigger is: 
+
+PIPELINE is any of X
+AND
+At least one associated LINE ITEM has
+Product Channel is any of Print
+
 ### Step 1
 This step retrieves all the LINE ITEMS, CONTACTS and COMPANIES from the DEAL and stores them into variables (outputFields) that will be accessable to the rest of the workflow.
 

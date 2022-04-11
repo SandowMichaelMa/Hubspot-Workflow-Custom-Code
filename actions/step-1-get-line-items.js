@@ -94,7 +94,7 @@ async function getLineItemsData (event, data) {
     const results = await hubspotClient.crm.lineItems.basicApi.getById(data.id, 
       [
         'name', //Name of Line Item.
-        'product_type', //Custom Property
+        'product_channel', //Custom Property
         'publication', //Custom Property
         'quantity' //Custom Property
       ])
