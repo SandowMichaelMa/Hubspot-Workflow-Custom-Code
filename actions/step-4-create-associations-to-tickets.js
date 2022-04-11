@@ -7,6 +7,7 @@
   Property: newTickets
   Property: contacts
   Property: companies
+  Property: Deal ID (hs_object_id)
   
   Output:
   (optional) ???
