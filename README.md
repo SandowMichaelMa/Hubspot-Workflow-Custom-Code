@@ -55,6 +55,9 @@ event.inputFields.INPUT_FIELD_NAME
 ## Process
 The actions are broken into four steps with each step performing a specific task. The reason to break it apart is to ensure we never run into the 20 second execution time or the memory limit of an action.
 
+![alt Workflow image](https://github.com/SandowMichaelMa/Hubspot-Workflow-Custom-Code/blob/df2412a0cb6698db1557f9576c749171ad556844/workflow-screenshot.png?raw=true)
+
+
 ### Trigger
 The workflow trigger is: 
 
