@@ -46,12 +46,15 @@ Example data:
 ```
 
 You can access these values like so:
+
 event.origin.portalId which has a value = 1
+
 event.object.objectType which has a value = DEAL
 
 The inputFields are the defined elements in this module OR output elements from other nodes in the workflow.
 
 You can access these values like so:
+
 event.inputFields.INPUT_FIELD_NAME
 
 ## Process
