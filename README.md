@@ -71,16 +71,16 @@ AND
 At least one associated LINE ITEM has
 Product Channel is any of Print
 
-### Step 1
+### Step 1 - [step-1-get-line-items.js](actions/step-1-get-line-items.js)
 This step retrieves all the LINE ITEMS, CONTACTS and COMPANIES from the DEAL and stores them into variables (outputFields) that will be accessable to the rest of the workflow.
 
-### Step 2
+### Step 2 - [step-2-format-data-from-line-items.js](actions/step-2-format-data-from-line-items.js)
 This step takes the LINE ITEM data variable created in Step 1 and then processes them into the JSON format for batch creating ticket. The majority of any logic is done here. You can skip LINE ITEMS that you don't want to be processed by this workflow or add conditions to assign it to specific things (eg, if X data exists, assign it to PIPELINE Y).
 
-### Step 3
+### Step 3 - [step-3-create-tickets.js](actions/step-3-create-tickets.js)
 This step takes the batched formatted data in Step 2 and posts it to Hubspot. This creates all the tickets and assigns the basic data set we defined. This outputs the new TICKET ids.
 
-### Step 4
+### Step 4 - [step-4-create-associations-to-tickets.js](actions/step-4-create-associations-to-tickets.js)
 ASSOCIATIONS have to be created after the tickets are created. We assign the CONTACTS, COMPANIES and DEAL so that the data is readily available in the ticket. 
 
 ## Questions
