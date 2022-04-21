@@ -87,13 +87,16 @@ exports.main = async (event, callback) => {
   
   //Loop through all the tickets
   newTickets.forEach (ticket => {
+
     //Setting DEALs to tickets
+    {
     let processingData = {}
     processingData["from"] = { id: ticket.id}
     processingData["to"] = { id: event.inputFields.hs_object_id}
     processingData["type"] = "ticket_to_deal"
     associationDeal.inputs.push(processingData)
-    
+    }
+
     //Loop through contacts
     contacts.forEach (contact => {
       let processingData = {}
